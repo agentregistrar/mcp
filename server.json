@@ -2,9 +2,21 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "dev.agentregistrar/agentregistrar",
   "title": "Agent Registrar Identity Broker MCP",
-  "description": "Let AI agents sign up for services under a verified human owner, with delegated terms acceptance and agent inboxes.",
-  "version": "1.0.0",
+  "description": "Let AI agents sign up for services under a verified human owner, with terms acceptance and inboxes.",
+  "version": "1.0.1",
   "websiteUrl": "https://agentregistrar.dev",
+  "icons": [
+    {
+      "src": "https://agentregistrar.dev/icon.svg",
+      "mimeType": "image/svg+xml",
+      "sizes": ["any"]
+    },
+    {
+      "src": "https://agentregistrar.dev/apple-icon.png",
+      "mimeType": "image/png",
+      "sizes": ["180x180"]
+    }
+  ],
   "repository": {
     "url": "https://github.com/agentregistrar/mcp",
     "source": "github"

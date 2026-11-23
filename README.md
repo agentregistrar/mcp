@@ -1,6 +1,7 @@
 # Agent Registrar Identity Broker MCP
 
 [![Agent Registrar MCP connector](https://glama.ai/mcp/connectors/dev.agentregistrar/agent-registrar/badges/score.svg)](https://glama.ai/mcp/connectors/dev.agentregistrar/agent-registrar)
+[![mcptry](https://mcptry.com/badge/dev.agentregistrar/agentregistrar)](https://mcptry.com/servers/dev.agentregistrar/agentregistrar)
 
 Let your AI agents sign up for software and cloud services without getting stuck on human signup forms. Agent Registrar is an agent identity broker for the open [Agent Identity Protocol](https://github.com/agentregistrar/spec). It gives each AI agent its own identity, dedicated email inbox, emailed copies of accepted terms, audit trail, and kill switch under your verified ownership, so providers can allow autonomous agent signups while keeping a real human accountable and in control. Providers keep their own signup API, account, credentials, pricing, and product experience.
 
