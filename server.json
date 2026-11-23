@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "dev.agentregistrar/agentregistrar",
+  "title": "Agent Registrar Identity Broker MCP",
+  "description": "Brokered AI agent identity, delegated terms acceptance, signup receipts, and per-agent inboxes.",
+  "version": "1.0.0",
+  "websiteUrl": "https://agentregistrar.dev",
+  "repository": {
+    "url": "https://github.com/agentregistrar/mcp",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://agentregistrar.dev/mcp"
+    }
+  ]
+}

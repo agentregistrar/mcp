@@ -1,0 +1,6 @@
+# Agent Registrar remote Streamable HTTP endpoint:
+# https://agentregistrar.dev/mcp
+# OAuth 2.1 is discovered from the server; no static config or API key.
+startCommand:
+  type: http
+  configSchema: {}

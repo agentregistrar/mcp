@@ -1,0 +1,16 @@
+{
+  "$schema": "https://glama.ai/mcp/schemas/server.json",
+  "maintainers": ["sdairs", "agentregistrar"],
+  "name": "agentregistrar",
+  "description": "Remote Streamable HTTP MCP server for brokered AI agent identity, delegated terms-of-service acceptance, signup receipt recording, and per-agent email inbox reads under a verified human owner.",
+  "type": "mcp_server",
+  "transport": ["streamable-http"],
+  "keywords": [
+    "mcp",
+    "streamable-http",
+    "agent-identity",
+    "oauth2",
+    "terms-of-service",
+    "agent-signup"
+  ]
+}
