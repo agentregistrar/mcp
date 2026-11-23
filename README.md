@@ -5,7 +5,7 @@
 
 Let your AI agents sign up for software and cloud services without getting stuck on human signup forms. Agent Registrar is an agent identity broker for the open [Agent Identity Protocol](https://github.com/agentregistrar/spec). It gives each AI agent its own identity, dedicated email inbox, emailed copies of accepted terms, audit trail, and kill switch under your verified ownership, so providers can allow autonomous agent signups while keeping a real human accountable and in control. Providers keep their own signup API, account, credentials, pricing, and product experience.
 
-This repository holds the public documentation and registry manifests (`server.json`, `glama.json`, `smithery.yaml`) for the hosted remote MCP server at `https://agentregistrar.dev/mcp`. The server exposes four tools and four static resources over Streamable HTTP with OAuth 2.1. There is no local process, no package install, and no static API key.
+This repository holds the public documentation and registry manifests (`server.json`, `glama.json`, `smithery.yaml`) for the hosted remote MCP server at `https://agentregistrar.dev/mcp`. The server exposes five tools and four static resources over Streamable HTTP with OAuth 2.1. There is no local process, no package install, and no static API key.
 
 - Remote MCP endpoint: `https://agentregistrar.dev/mcp`
 - Discovery manifest: `https://agentregistrar.dev/.well-known/mcp.json`
@@ -18,8 +18,9 @@ This repository holds the public documentation and registry manifests (`server.j
 
 | Tool | What it does |
 | :--- | :--- |
-| `identity_whoami` | Shows the active agent, its inbox address and scopes, the verified human owner, recent signups, and the latest acceptance per service. Read-only. |
-| `identity_signup` | Fetches the provider's discovery document and terms, records the delegated acceptance, and returns a prepared POST request plus a short-lived signed identity assertion. Send the request exactly as returned. |
+| `identity_whoami` | Shows the active agent, its inbox address and scopes, the verified human owner, recent signups, services signed up under other agents of the same human (`human_other_agent_signups`), and the latest acceptance per service. Read-only. |
+| `identity_signup` | Fetches the provider's discovery document and terms, records the delegated acceptance, and returns a prepared POST request plus a short-lived signed `purpose: "signup"` identity assertion. Send the request exactly as returned. |
+| `identity_login` | Day-2 re-authentication for services publishing `endpoints.agent_login` (or attaching a new agent under the same human). Checks re-login policy and terms freshness, re-attests drifted terms when allowed, and returns a prepared POST request with a fresh 120s `purpose: "login"` assertion. |
 | `identity_record_signup` | Records a provider-signed `signup_token` receipt. Recording is idempotent, and the broker never stores provider credentials. |
 | `inbox_read` | Lists, reads, or waits for inbound agent email, including OTP detection. |
 
@@ -27,10 +28,10 @@ This repository holds the public documentation and registry manifests (`server.j
 
 | Resource | URI | Contents |
 | :--- | :--- | :--- |
-| `quickstart` | `agentregistrar://docs/quickstart` | The end-to-end workflow: check identity, sign up, send the prepared request, record the receipt, read the inbox. |
-| `assertion-claims` | `agentregistrar://docs/assertion-claims` | The signed assertion claim set, a worked example, and relying-party verification steps. |
-| `error-recovery` | `agentregistrar://docs/error-recovery` | The tool error envelope and the stable error codes with retryability and next steps. |
-| `spec` | `agentregistrar://docs/spec` | A short protocol summary and canonical specification, guide, and docs links. |
+| `quickstart` | `agentregistrar://docs/quickstart` | The end-to-end Day-1 and Day-2 workflow: check identity, sign up or re-login, send the prepared request, handle `handoff` and step-up responses, record the receipt, and read the inbox. |
+| `assertion-claims` | `agentregistrar://docs/assertion-claims` | The signed assertion claim set (including `purpose` and `accepted_rp_tos_version`), a worked example, and relying-party verification steps. |
+| `error-recovery` | `agentregistrar://docs/error-recovery` | The tool error envelope and the stable error codes (32 codes) with retryability and next steps. |
+| `spec` | `agentregistrar://docs/spec` | A short `v2.2.0` protocol summary and canonical specification, guide, and docs links. |
 
 ## Install
 
