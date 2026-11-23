@@ -2,7 +2,7 @@
   "$schema": "https://glama.ai/mcp/schemas/server.json",
   "maintainers": ["sdairs", "agentregistrar"],
   "name": "agentregistrar",
-  "description": "Remote Streamable HTTP MCP server for brokered AI agent identity, delegated terms-of-service acceptance, signup receipt recording, and per-agent email inbox reads under a verified human owner.",
+  "description": "Let your AI agents sign up for software and cloud services without getting stuck on human signup forms. Agent Registrar gives each agent its own identity, dedicated email inbox, and delegated terms-of-service acceptance under your verified ownership, so providers can allow autonomous agent signups while keeping a real human accountable and in control.",
   "type": "mcp_server",
   "transport": ["streamable-http"],
   "keywords": [
