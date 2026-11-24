@@ -12,7 +12,8 @@ This repository holds the public documentation and registry manifests (`server.j
 - Client install guide: `https://docs.agentregistrar.dev/agents/install/`
 - Quickstart: `https://docs.agentregistrar.dev/agents/quickstart/`
 - Public specification: `https://github.com/agentregistrar/spec`
-- Live reference provider (VaporCloud): `https://skdl.dev` (`https://skdl.dev/.well-known/agent-signup.json`)
+- Live Demo Network Hub & Workbench: `https://agentregistrardemobroker.com`
+- Live reference provider: `https://reference.agentregistrardemorp.com` (`https://reference.agentregistrardemorp.com/.well-known/agent-signup.json`)
 
 ## Tools
 
