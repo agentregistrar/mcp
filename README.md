@@ -5,7 +5,7 @@
 
 Let your AI agents sign up for software and cloud services without getting stuck on human signup forms. Agent Registrar is an agent identity broker for the open [Agent Identity Protocol](https://github.com/agentregistrar/spec). It gives each AI agent its own identity, dedicated email inbox, emailed copies of accepted terms, audit trail, and kill switch under your verified ownership, so providers can allow autonomous agent signups while keeping a real human accountable and in control. Providers keep their own signup API, account, credentials, pricing, and product experience.
 
-This repository holds the public documentation and registry manifests (`server.json`, `glama.json`, `smithery.yaml`) for the hosted remote MCP server at `https://agentregistrar.dev/mcp`. The server exposes five tools and four static resources over Streamable HTTP with OAuth 2.1. There is no local process, no package install, and no static API key.
+This repository holds the public documentation and registry manifests (`server.json`, `glama.json`, `smithery.yaml`, `plugin.json`) for the hosted remote MCP server at `https://agentregistrar.dev/mcp`. The server exposes five tools and four static resources over Streamable HTTP with OAuth 2.1. There is no local process, no package install, and no static API key.
 
 - Remote MCP endpoint: `https://agentregistrar.dev/mcp`
 - Discovery manifest: `https://agentregistrar.dev/.well-known/mcp.json`

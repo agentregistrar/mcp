@@ -1,0 +1,17 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "agentregistrar",
+  "version": "1.1.0",
+  "description": "Remote MCP server and Agent Identity Protocol skills for brokered AI agent signup, login, and delegated terms acceptance.",
+  "author": "Agent Registrar",
+  "homepage": "https://agentregistrar.dev",
+  "repository": "https://github.com/agentregistrar/mcp",
+  "license": "Apache-2.0",
+  "keywords": [
+    "agent-identity",
+    "mcp",
+    "oauth",
+    "agentic-signup",
+    "agent-registrar"
+  ]
+}
